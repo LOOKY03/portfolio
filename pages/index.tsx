@@ -24,6 +24,11 @@ const Home: NextPage = () => {
   const toggleHulu = () => setModalHulu(!modalHulu);
   const toggleDisney = () => setModalDisney(!modalDisney);
 
+
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="">
       <Head>
@@ -270,10 +275,10 @@ const Home: NextPage = () => {
             <p>I cloned vocal</p>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toggleVocal}>
+            <Button color="primary" onClick={()=>openInNewTab('https://vocal-clone-firebase.vercel.app/')}>
               View Site
             </Button>
-            <Button color="secondary" onClick={toggleVocal}>
+            <Button color="secondary" onClick={()=>openInNewTab('https://github.com/LOOKY03/vocal-clone')}>
               See Code
             </Button>
           </ModalFooter>
@@ -292,10 +297,10 @@ const Home: NextPage = () => {
             </p>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toggleNetflix}>
+            <Button color="primary" onClick={()=>openInNewTab('https://netflix-clone-build-98a86.web.app/')}>
               View Site
             </Button>{" "}
-            <Button color="secondary" onClick={toggleNetflix}>
+            <Button color="secondary" onClick={()=>openInNewTab('https://github.com/LOOKY03/netflix-clone')}>
               See Code
             </Button>
           </ModalFooter>
