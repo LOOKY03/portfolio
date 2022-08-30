@@ -1,86 +1,354 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Navbar from "../components/Navbar";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import HeadsetIcon from "@mui/icons-material/Headset";
+import PedalBikeIcon from "@mui/icons-material/PedalBike";
+import SportsMotorsportsIcon from "@mui/icons-material/SportsMotorsports";
+import CodeIcon from "@mui/icons-material/Code";
+import DownloadIcon from "@mui/icons-material/Download";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  //const [modal, setModal] = useState(false);
+  const [modalVocal, setModalVocal] = useState(false);
+  const [modalNetflix, setModalNetflix] = useState(false);
+  const [modalHulu, setModalHulu] = useState(false);
+  const [modalDisney, setModalDisney] = useState(false);
+
+  const toggleVocal = () => setModalVocal(!modalVocal);
+  const toggleNetflix = () => setModalNetflix(!modalNetflix);
+  const toggleHulu = () => setModalHulu(!modalHulu);
+  const toggleDisney = () => setModalDisney(!modalDisney);
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>My Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Jfxs329H5weRiGDChdHLW-Usyft4JakF4Q&usqp=CAU')] bg-contain ">
+        <Navbar />
+        <main className="max-w-screen-2xl mx-auto  grid grid-cols-1 md:grid-cols-2 text-slate-300 h-80vh">
+          {/* left */}
+          <div className="max-w-2xl pl-10 lg:pl-36 mt-40">
+            <h1 className="text-4xl font-medium mt-5">Hello, My name is </h1>
+            <h1 className="text-6xl font-medium mt-5 text-yellow-700">
+              Arvin Vaje{" "}
+            </h1>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+            <h1 className="mt-5 text-lg">I am a Front End Developer</h1>
+            <p className="mt-10 w-3/4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              nostrum earum neque aliquid quaerat odit cumque velit blanditiis
+              necessitatibus sequi.
+            </p>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
+            <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
+              Hire Me
+            </button>
+          </div>
+
+          {/* right */}
+          <div className=" text-white relative hidden lg:block md:block">
+            <div className="my-custom-style h-full w-full">
+              <img
+                className="absolute w-full h-full  object-cover "
+                src="/myimage.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </main>
+      </div>
+
+      {/* about page */}
+      <div
+        id="about"
+        className="h-fit md:fit lg:h-80vh 2xl:h-60vh bg-slate-800 text-slate-300 pb-10 md:pb-10"
+      >
+        <h4 className="text-5xl font-semibold text-center pt-12">about me</h4>
+        <p className="text-center w-3/4 mx-auto mt-5 text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
+          alias cum minus cupiditate, non autem neque inventore excepturi nemo
+          molestias in aperiam consequuntur nostrum adipisci suscipit sit
+          laborum corporis?
         </p>
+        <img
+          src="/myimage.jpg"
+          alt=""
+          className="h-96 mx-auto md:hidden rounded-3xl mt-5"
+        />
+        <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-2 mt-10 max-w-screen-2xl mx-auto text-lg p-5">
+          {/* Personal Details */}
+          <div>
+            <h3>Personal Details</h3>
+            <div className="flex space-x-10 mt-5 ">
+              <div className="text-amber-600">
+                <p>Birthdate </p>
+                <p>Phone </p>
+                <p>Email </p>
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
+                <p>Job Status</p>
+              </div>
+              <div>
+                <p>08-26-1984 </p>
+                <p>09459854111 </p>
+                <p>arvinvaje26@yahoo.com </p>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+                <p>Freelance</p>
+              </div>
+            </div>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          {/* Interest */}
+          <div>
+            <h3>My Interests</h3>
+            <div>
+              <ul className=" flex justify-around mt-10">
+                <li className="p-4 bg-gray-900 rounded-lg ">
+                  <SportsEsportsIcon fontSize="large" />
+                </li>
+                <li className="p-4 bg-gray-900 rounded-lg">
+                  <HeadsetIcon fontSize="large" />
+                </li>
+                <li className="p-4 bg-gray-900 rounded-lg">
+                  <PedalBikeIcon fontSize="large" />
+                </li>
+                <li className="p-4 bg-gray-900 rounded-lg">
+                  <SportsMotorsportsIcon fontSize="large" />
+                </li>
+                <li className="p-4 bg-gray-900 rounded-lg">
+                  <CodeIcon fontSize="large" />
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
+        <div className="flex justify-center">
+          <button className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
+            Download CV{" "}
+            <span>
+              <DownloadIcon />
+            </span>
+          </button>
+        </div>
+      </div>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+      {/* Projects */}
+
+      <div className="bg-[url('https://t4.ftcdn.net/jpg/00/98/59/35/360_F_98593539_L3cNIqMZT511Qoz2DXe31xBAqMqPYdGj.jpg')] bg-contain h-fit bg:h-80vh text-slate-300">
+        <div className="lg:max-w-max-w-screen-1350 mx-auto">
+          <h1
+            id="projects"
+            className="text-5xl font-semibold text-center pt-12"
+          >
+            projects
+          </h1>
+          <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 p-5 lg:pb-40">
+            <div
+              className="w-full rounded overflow-hidden shadow-lg group"
+              onClick={toggleVocal}
+            >
+              <img
+                className="w-full h-44 group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                src="/vocal-media-picture.png"
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
+                  Cloned vocal.media blogging site
+                </div>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+
+            <div
+              className="w-full rounded overflow-hidden shadow-lg group"
+              onClick={toggleNetflix}
+            >
+              <img
+                className="w-full h-44 group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                src="/netflix-picture.png"
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
+                  Cloned netflix website
+                </div>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+
+            <div
+              className="w-full rounded overflow-hidden shadow-lg group"
+              onClick={toggleHulu}
+            >
+              <img
+                className="w-full h-44 group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                src="/hulu-picture.png"
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
+                  Cloned Hulu website
+                </div>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+
+            <div
+              className="w-full rounded overflow-hidden shadow-lg group"
+              onClick={toggleDisney}
+            >
+              <img
+                className="w-full h-44 group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                src="/disney-picture.png"
+                alt="Sunset in the mountains"
+              />
+              <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">
+                  Cloned Disney website
+                </div>
+              </div>
+              <div className="px-6 pt-4 pb-2">
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #photography
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #travel
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #winter
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modals */}
+      {/* vocal */}
+      <div>
+        <Modal isOpen={modalVocal} toggle={toggleVocal} centered size="lg">
+          <ModalHeader toggle={toggleVocal}>Vocal Clone</ModalHeader>
+          <ModalBody>
+            <img src="/vocal-media-picture.png" alt="" />
+            <p>I cloned vocal</p>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={toggleVocal}>
+              View Site
+            </Button>
+            <Button color="secondary" onClick={toggleVocal}>
+              See Code
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+      {/* netflix */}
+      <div>
+        <Modal isOpen={modalNetflix} toggle={toggleNetflix} centered size="lg">
+          <ModalHeader toggle={toggleNetflix}>Netflix Clone</ModalHeader>
+          <ModalBody>
+            <img src="/netflix-picture.png" alt="" />
+            <p>
+              I used react js and styled component css in making this site. I
+              incorporated redux toolkit in creating the site to manage global
+              states. Also used firebase to do the authentication.
+            </p>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={toggleNetflix}>
+              View Site
+            </Button>{" "}
+            <Button color="secondary" onClick={toggleNetflix}>
+              See Code
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+      {/* hulu clone */}
+      <div>
+        <Modal isOpen={modalHulu} toggle={toggleHulu} centered size="lg">
+          <ModalHeader toggle={toggleHulu}>Hulu Clone</ModalHeader>
+          <ModalBody>
+            <img src="/hulu-picture.png" alt="" />
+            <p>
+              I used react js and styled component css in making this site. I
+              followed a tutorial in making this website and added search
+              functionality to look for videos.
+            </p>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={toggleHulu}>
+              View Site
+            </Button>{" "}
+            <Button color="secondary" onClick={toggleHulu}>
+              See Code
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+
+      {/* disney clone */}
+
+      <div>
+        <Modal isOpen={modalDisney} toggle={toggleDisney} centered size="lg">
+          <ModalHeader toggle={toggleDisney}>Disney Clone</ModalHeader>
+          <ModalBody>
+            <img src="/disney-picture.png" alt="" />
+            <p>
+              I used react js and styled component css in making this site. I
+              followed a tutorial in making this website and added own sliding
+              side panet when when viewed on smaller devices
+            </p>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={toggleDisney}>
+              View Site
+            </Button>{" "}
+            <Button color="secondary" onClick={toggleDisney}>
+              See Code
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
