@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
@@ -12,7 +11,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
-const Home: NextPage = () => {
+const Home = () => {
   //const [modal, setModal] = useState(false);
   const [modalVocal, setModalVocal] = useState(false);
   const [modalNetflix, setModalNetflix] = useState(false);
@@ -25,7 +24,7 @@ const Home: NextPage = () => {
   const toggleDisney = () => setModalDisney(!modalDisney);
 
 
-  const openInNewTab = url => {
+  const openInNewTab = (url:any) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
