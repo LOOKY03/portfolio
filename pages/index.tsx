@@ -23,9 +23,8 @@ const Home = () => {
   const toggleHulu = () => setModalHulu(!modalHulu);
   const toggleDisney = () => setModalDisney(!modalDisney);
 
-
-  const openInNewTab = (url:any) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  const openInNewTab = (url: any) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -36,19 +35,21 @@ const Home = () => {
       </Head>
       <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Jfxs329H5weRiGDChdHLW-Usyft4JakF4Q&usqp=CAU')] bg-contain ">
         <Navbar />
-        <main className="max-w-screen-2xl mx-auto  grid grid-cols-1 md:grid-cols-2 text-slate-300 h-80vh">
+        <main className="max-w-screen-2xl mx-auto  grid grid-cols-1 md:grid-cols-2 text-slate-300 h-fit pb-10 lg:h-80vh lg:pb-0">
           {/* left */}
-          <div className="max-w-2xl pl-10 lg:pl-36 mt-40">
-            <h1 className="text-4xl font-medium mt-5">Hello, My name is </h1>
-            <h1 className="text-6xl font-medium mt-5 text-yellow-700">
-              Arvin Vaje{" "}
+          <div className="max-w-2xl pl-14 lg:pl-36 mt-40">
+            <h1 className="text-3xl lg:text-4xl font-medium mt-5">
+              Hello, My name is
+            </h1>
+            <h1 className="text-5xl lg:text-6xl font-medium mt-2 text-yellow-700 lg:pt-5">
+              Arvin Vaje
             </h1>
 
-            <h1 className="mt-5 text-lg">I am a Front End Developer</h1>
+            <h1 className="mt-3 lg:mt-5 text-lg">I am a Front End Developer</h1>
             <p className="mt-10 w-3/4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-              nostrum earum neque aliquid quaerat odit cumque velit blanditiis
-              necessitatibus sequi.
+              I'm open to learning, adapt to work with the team, freelance
+              opportunities, contract jobs and use skills to solve complex UI
+              challenges and provide value to the growth of an organization
             </p>
 
             <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
@@ -74,7 +75,7 @@ const Home = () => {
         id="about"
         className="h-fit md:fit lg:h-80vh 2xl:h-60vh bg-slate-800 text-slate-300 pb-10 md:pb-10"
       >
-        <h4 className="text-5xl font-semibold text-center pt-12">about me</h4>
+        <h4 className="text-5xl font-semibold text-center pt-12">About me</h4>
         <p className="text-center w-3/4 mx-auto mt-5 text-lg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
           alias cum minus cupiditate, non autem neque inventore excepturi nemo
@@ -94,14 +95,14 @@ const Home = () => {
               <div className="text-amber-600">
                 <p>Birthdate </p>
                 <p>Phone </p>
-                <p>Email </p>
+                
 
                 <p>Job Status</p>
               </div>
               <div>
                 <p>08-26-1984 </p>
                 <p>09459854111 </p>
-                <p>arvinvaje26@yahoo.com </p>
+                
 
                 <p>Freelance</p>
               </div>
@@ -111,24 +112,38 @@ const Home = () => {
           {/* Interest */}
           <div>
             <h3>My Interests</h3>
-            <div>
-              <ul className=" flex justify-around mt-10">
-                <li className="p-4 bg-gray-900 rounded-lg ">
-                  <SportsEsportsIcon fontSize="large" />
-                </li>
-                <li className="p-4 bg-gray-900 rounded-lg">
-                  <HeadsetIcon fontSize="large" />
-                </li>
-                <li className="p-4 bg-gray-900 rounded-lg">
-                  <PedalBikeIcon fontSize="large" />
-                </li>
-                <li className="p-4 bg-gray-900 rounded-lg">
-                  <SportsMotorsportsIcon fontSize="large" />
-                </li>
-                <li className="p-4 bg-gray-900 rounded-lg">
-                  <CodeIcon fontSize="large" />
-                </li>
-              </ul>
+
+            <div className=" flex justify-around items-center mt-10">
+              <span className=" bg-gray-900 rounded-lg p-2 ">
+                <SportsEsportsIcon
+                  fontSize="large"
+                  className="h-10 w-10 lg:h-20 lg:w-20"
+                />
+              </span>
+              <span className=" bg-gray-900 rounded-lg p-2 ">
+                <HeadsetIcon
+                  fontSize="large"
+                  className="h-10 w-10 lg:h-20 lg:w-20"
+                />
+              </span>
+              <span className=" bg-gray-900 rounded-lg p-2 ">
+                <PedalBikeIcon
+                  fontSize="large"
+                  className="h-10 w-10 lg:h-20 lg:w-20"
+                />
+              </span>
+              <span className=" bg-gray-900 rounded-lg p-2 ">
+                <SportsMotorsportsIcon
+                  fontSize="large"
+                  className="h-10 w-10 lg:h-20 lg:w-20"
+                />
+              </span>
+              <span className=" bg-gray-900 rounded-lg p-2 ">
+                <CodeIcon
+                  fontSize="large"
+                  className="h-10 w-10 lg:h-20 lg:w-20"
+                />
+              </span>
             </div>
           </div>
         </div>
@@ -150,7 +165,7 @@ const Home = () => {
             id="projects"
             className="text-5xl font-semibold text-center pt-12"
           >
-            projects
+            Projects
           </h1>
           <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 p-5 lg:pb-40">
             <div
@@ -274,10 +289,20 @@ const Home = () => {
             <p>I cloned vocal</p>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={()=>openInNewTab('https://vocal-clone-firebase.vercel.app/')}>
+            <Button
+              color="primary"
+              onClick={() =>
+                openInNewTab("https://vocal-clone-firebase.vercel.app/")
+              }
+            >
               View Site
             </Button>
-            <Button color="secondary" onClick={()=>openInNewTab('https://github.com/LOOKY03/vocal-clone')}>
+            <Button
+              color="secondary"
+              onClick={() =>
+                openInNewTab("https://github.com/LOOKY03/vocal-clone")
+              }
+            >
               See Code
             </Button>
           </ModalFooter>
@@ -296,10 +321,20 @@ const Home = () => {
             </p>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={()=>openInNewTab('https://netflix-clone-build-98a86.web.app/')}>
+            <Button
+              color="primary"
+              onClick={() =>
+                openInNewTab("https://netflix-clone-build-98a86.web.app/")
+              }
+            >
               View Site
             </Button>{" "}
-            <Button color="secondary" onClick={()=>openInNewTab('https://github.com/LOOKY03/netflix-clone')}>
+            <Button
+              color="secondary"
+              onClick={() =>
+                openInNewTab("https://github.com/LOOKY03/netflix-clone")
+              }
+            >
               See Code
             </Button>
           </ModalFooter>
@@ -360,7 +395,7 @@ const Home = () => {
             <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center text-gray-900 dark:text-white">
               Contact Me
             </h2>
-           
+
             <form action="#" className="space-y-8 max-w-7xl mx-auto">
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">

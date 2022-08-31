@@ -1,0 +1,31 @@
+    <main className="max-w-screen-2xl mx-auto  grid grid-cols-1 md:grid-cols-2 text-slate-300 h-80vh">
+          {/* left */}
+          <div className="max-w-2xl pl-10 lg:pl-36 mt-40">
+            <h1 className="text-4xl font-medium mt-5">Hello, My name is </h1>
+            <h1 className="text-6xl font-medium mt-5 text-yellow-700">
+              Arvin Vaje{" "}
+            </h1>
+
+            <h1 className="mt-5 text-lg">I am a Front End Developer</h1>
+            <p className="mt-10 w-3/4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              nostrum earum neque aliquid quaerat odit cumque velit blanditiis
+              necessitatibus sequi.
+            </p>
+
+            <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
+              Hire Me
+            </button>
+          </div>
+
+          {/* right */}
+          <div className=" text-white relative hidden lg:block md:block">
+            <div className="my-custom-style h-full w-full">
+              <img
+                className="absolute w-full h-full  object-cover "
+                src="/myimage.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </main>
