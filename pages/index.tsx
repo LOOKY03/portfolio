@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavbarTop";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import HeadsetIcon from "@mui/icons-material/Headset";
 import PedalBikeIcon from "@mui/icons-material/PedalBike";
@@ -75,7 +75,7 @@ const Home = () => {
         id="about"
         className="h-fit md:fit lg:h-80vh 2xl:h-60vh bg-slate-800 text-slate-300 pb-10 md:pb-10"
       >
-        <h4 className="text-5xl font-semibold text-center pt-12">About me</h4>
+        <h4 className="text-4xl font-semibold text-center pt-12">About me</h4>
         <p className="text-center w-3/4 mx-auto mt-5 text-lg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
           alias cum minus cupiditate, non autem neque inventore excepturi nemo
@@ -163,7 +163,7 @@ const Home = () => {
         <div className="lg:max-w-max-w-screen-1350 mx-auto">
           <h1
             id="projects"
-            className="text-5xl font-semibold text-center pt-12"
+            className="text-4xl font-semibold text-center pt-12"
           >
             Projects
           </h1>
@@ -392,7 +392,7 @@ const Home = () => {
       <div className="">
         <section className=" bg-gray-900">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center  text-slate-300 ">
               Contact Me
             </h2>
 
