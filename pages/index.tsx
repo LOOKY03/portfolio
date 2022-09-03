@@ -7,9 +7,42 @@ import PedalBikeIcon from "@mui/icons-material/PedalBike";
 import SportsMotorsportsIcon from "@mui/icons-material/SportsMotorsports";
 import CodeIcon from "@mui/icons-material/Code";
 import DownloadIcon from "@mui/icons-material/Download";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+
+const useDeviceSize = () => {
+
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    // component is mounted and window is available
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
+    // unsubscribe from the event on component unmount
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
+  return [width, height]
+
+}
+
 
 const Home = () => {
   //const [modal, setModal] = useState(false);
@@ -17,6 +50,7 @@ const Home = () => {
   const [modalNetflix, setModalNetflix] = useState(false);
   const [modalHulu, setModalHulu] = useState(false);
   const [modalDisney, setModalDisney] = useState(false);
+ 
 
   const toggleVocal = () => setModalVocal(!modalVocal);
   const toggleNetflix = () => setModalNetflix(!modalNetflix);
@@ -27,6 +61,13 @@ const Home = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
+  
+  const [width, height] = useDeviceSize();
+
+  //console.log(width)
+  
+  
+
   return (
     <div className="">
       <Head>
@@ -35,126 +76,118 @@ const Home = () => {
       </Head>
       <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Jfxs329H5weRiGDChdHLW-Usyft4JakF4Q&usqp=CAU')] bg-contain ">
         <Navbar />
-        <main className="max-w-screen-2xl mx-auto  grid grid-cols-1 md:grid-cols-2 text-slate-300 h-fit pb-10 lg:h-80vh lg:pb-0">
-          {/* left */}
-          <div className="max-w-2xl pl-14 lg:pl-36 mt-40">
-            <h1 className="text-3xl lg:text-4xl font-medium mt-5">
-              Hello, My name is
-            </h1>
-            <h1 className="text-5xl lg:text-6xl font-medium mt-2 text-yellow-700 lg:pt-5">
-              Arvin Vaje
-            </h1>
+      
+        <Container>
+          <Row xs={width < 1000 ? '1': "2"} className='pl-16 lg:pl-0'>
+            <Col className="bg-inherit text-slate-300 pt-36 pb-10  ">
+              <h1 className="text-4xl font-medium mt-5 ">Hello, My name is </h1>
+              <h1 className="text-6xl font-medium mt-5 text-yellow-700">
+                <img src="/name.svg" className="h-14" alt="" />
+                {/* Arvin Vaje */}
+              </h1>
 
-            <h1 className="mt-3 lg:mt-5 text-lg">I am a Front End Developer</h1>
-            <p className="mt-10 w-3/4">
-              I'm open to learning, adapt to work with the team, freelance
-              opportunities, contract jobs and use skills to solve complex UI
-              challenges and provide value to the growth of an organization
-            </p>
+              <h1 className="mt-5 text-lg">I am a Front End Developer</h1>
+              <p className="mt-10 w-3/4">
+                I'm open to learning, adapt to work with the team, freelance
+                opportunities, contract jobs and use skills to solve complex UI
+                challenges and provide value to the growth of an organization
+              </p>
 
-            <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
-              Hire Me
-            </button>
-          </div>
-
-          {/* right */}
-          <div className=" text-white relative hidden lg:block md:block">
-            <div className="my-custom-style h-full w-full">
-              <img
-                className="absolute w-full h-full  object-cover "
-                src="/myimage.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </main>
+              <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
+                Hire Me
+              </button>
+            </Col>
+            <Col className="relative ">
+              <div className="my-custom-style bg-transparent">
+                <img src="/myimage.jpg" alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
       {/* about page */}
-      <div
-        id="about"
-        className="h-fit md:fit lg:h-80vh 2xl:h-60vh bg-slate-800 text-slate-300 pb-10 md:pb-10"
-      >
-        <h4 className="text-4xl font-semibold text-center pt-12">About me</h4>
-        <p className="text-center w-3/4 mx-auto mt-5 text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
-          alias cum minus cupiditate, non autem neque inventore excepturi nemo
-          molestias in aperiam consequuntur nostrum adipisci suscipit sit
-          laborum corporis?
-        </p>
-        <img
-          src="/myimage.jpg"
-          alt=""
-          className="h-96 mx-auto md:hidden rounded-3xl mt-5"
-        />
-        <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-2 mt-10 max-w-screen-2xl mx-auto text-lg p-5">
-          {/* Personal Details */}
-          <div>
-            <h3>Personal Details</h3>
-            <div className="flex space-x-10 mt-5 ">
-              <div className="text-amber-600">
-                <p>Birthdate </p>
-                <p>Phone </p>
-                
+      <div className="bg-slate-800">
+        <Container id="about" className=" text-slate-300 pb-10">
+          <h4 className="text-4xl font-semibold text-center pt-12">About me</h4>
+          <p className="text-center w-3/4 mx-auto mt-5 text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
+            alias cum minus cupiditate, non autem neque inventore excepturi nemo
+            molestias in aperiam consequuntur nostrum adipisci suscipit sit
+            laborum corporis?
+          </p>
+          <img
+            src="/myimage.jpg"
+            alt=""
+            className="h-96 mx-auto md:hidden rounded-3xl mt-5"
+          />
+          <div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 lg:grid-cols-2 mt-10 max-w-screen-2xl mx-auto text-lg p-5">
+            {/* Personal Details */}
+            <div>
+              <h3>Personal Details</h3>
+              <div className="flex space-x-10 mt-5 ">
+                <div className="text-amber-600">
+                  <p>Birthdate </p>
+                  <p>Phone </p>
 
-                <p>Job Status</p>
+                  <p>Job Status</p>
+                </div>
+                <div>
+                  <p>08-26-1984 </p>
+                  <p>09459854111 </p>
+
+                  <p>Freelance</p>
+                </div>
               </div>
-              <div>
-                <p>08-26-1984 </p>
-                <p>09459854111 </p>
-                
+            </div>
 
-                <p>Freelance</p>
+            {/* Interest */}
+            <div>
+              <h3>My Interests</h3>
+
+              <div className=" flex justify-around items-center mt-10">
+                <span className=" bg-gray-900 rounded-lg p-2 ">
+                  <SportsEsportsIcon
+                    fontSize="large"
+                    className="h-10 w-10 lg:h-20 lg:w-20"
+                  />
+                </span>
+                <span className=" bg-gray-900 rounded-lg p-2 ">
+                  <HeadsetIcon
+                    fontSize="large"
+                    className="h-10 w-10 lg:h-20 lg:w-20"
+                  />
+                </span>
+                <span className=" bg-gray-900 rounded-lg p-2 ">
+                  <PedalBikeIcon
+                    fontSize="large"
+                    className="h-10 w-10 lg:h-20 lg:w-20"
+                  />
+                </span>
+                <span className=" bg-gray-900 rounded-lg p-2 ">
+                  <SportsMotorsportsIcon
+                    fontSize="large"
+                    className="h-10 w-10 lg:h-20 lg:w-20"
+                  />
+                </span>
+                <span className=" bg-gray-900 rounded-lg p-2 ">
+                  <CodeIcon
+                    fontSize="large"
+                    className="h-10 w-10 lg:h-20 lg:w-20"
+                  />
+                </span>
               </div>
             </div>
           </div>
-
-          {/* Interest */}
-          <div>
-            <h3>My Interests</h3>
-
-            <div className=" flex justify-around items-center mt-10">
-              <span className=" bg-gray-900 rounded-lg p-2 ">
-                <SportsEsportsIcon
-                  fontSize="large"
-                  className="h-10 w-10 lg:h-20 lg:w-20"
-                />
+          <div className="flex justify-center">
+            <button className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
+              Download CV{" "}
+              <span>
+                <DownloadIcon />
               </span>
-              <span className=" bg-gray-900 rounded-lg p-2 ">
-                <HeadsetIcon
-                  fontSize="large"
-                  className="h-10 w-10 lg:h-20 lg:w-20"
-                />
-              </span>
-              <span className=" bg-gray-900 rounded-lg p-2 ">
-                <PedalBikeIcon
-                  fontSize="large"
-                  className="h-10 w-10 lg:h-20 lg:w-20"
-                />
-              </span>
-              <span className=" bg-gray-900 rounded-lg p-2 ">
-                <SportsMotorsportsIcon
-                  fontSize="large"
-                  className="h-10 w-10 lg:h-20 lg:w-20"
-                />
-              </span>
-              <span className=" bg-gray-900 rounded-lg p-2 ">
-                <CodeIcon
-                  fontSize="large"
-                  className="h-10 w-10 lg:h-20 lg:w-20"
-                />
-              </span>
-            </div>
+            </button>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <button className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
-            Download CV{" "}
-            <span>
-              <DownloadIcon />
-            </span>
-          </button>
-        </div>
+        </Container>
       </div>
 
       {/* Projects */}
@@ -184,13 +217,13 @@ const Home = () => {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #photography
+                  #nextjs
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #travel
+                  #firebase
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #winter
+                  #tailwindcss
                 </span>
               </div>
             </div>
@@ -211,13 +244,16 @@ const Home = () => {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #photography
+                  #reactjs
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #travel
+                  #styled-components css
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #winter
+                  #firebase
+                </span>
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                  #redux toolkit
                 </span>
               </div>
             </div>
@@ -238,13 +274,13 @@ const Home = () => {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #photography
+                  #reactjs
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #travel
+                  #tmdb
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #winter
+                  #css
                 </span>
               </div>
             </div>
@@ -265,13 +301,13 @@ const Home = () => {
               </div>
               <div className="px-6 pt-4 pb-2">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #photography
+                  #reactjs
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #travel
+                  #styled-component css
                 </span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                  #winter
+                  #redux toolkit
                 </span>
               </div>
             </div>
