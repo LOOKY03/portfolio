@@ -82,8 +82,8 @@ const Home = () => {
             <Col className="bg-inherit text-slate-300 pt-36 pb-10  ">
               <h1 className="text-4xl font-medium mt-5 ">Hello, My name is </h1>
               <h1 className="text-6xl font-medium mt-5 text-yellow-700">
-                <img src="/name.svg" className="h-14" alt="" />
-                {/* Arvin Vaje */}
+                {/* <img src="/name.svg" className="h-14" alt="" /> */}
+                Arvin Vaje
               </h1>
 
               <h1 className="mt-5 text-lg">I am a Front End Developer</h1>
