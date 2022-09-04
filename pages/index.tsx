@@ -520,7 +520,7 @@ const Home = () => {
               Contact Me
             </h2>
             <hr className="border-4 border-green-500 w-10 mx-auto" />
-            <form action="https://formsubmit.co/vaje.arvin14@gmail.com" method="POST" className="space-y-8 max-w-7xl mx-auto">
+            <form action="https://formsubmit.co/f0528c2d844e52ee576a808b4f7fafaf" method="POST" className="space-y-8 max-w-7xl mx-auto">
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Your email
