@@ -102,6 +102,7 @@ const Home = () => {
       <div className="bg-slate-800">
         <Container id="about" className=" text-slate-300 pb-10">
           <h4 className="text-4xl font-semibold text-center pt-12">About me</h4>
+          <hr className="border-4 border-green-500 w-10 mx-auto" />
           <p className="text-center w-3/4 mx-auto mt-5 text-lg">
             Hi, I'm Arvin Vaje. I'm currently working as an IT service desk at
             vestas wind system company. I'm a self-taught developer who is
@@ -186,6 +187,30 @@ const Home = () => {
         </Container>
       </div>
 
+      {/* Skills */} 
+      <div className="bg-neutral-200 ">
+        <div>
+          <h1
+            id="projects"
+            className="text-4xl font-semibold text-center pt-12"
+          >
+            Skills
+          </h1>
+          <hr className="border-4 border-green-500 w-10 mx-auto" />
+          <div className="flex justify-between flex-wrap lg:max-w-max-w-screen-1350 mx-auto pb-10 px-10">
+            <img src='/html5.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/css3.png' className="h-32 w-32 p-2 rounded-xl object-contain  bg-neutral-300 mb-2" alt="" />
+            <img src='/javascript.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/react.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/nextjs.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/bootstrap.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/github.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/firebase.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/sanity.io.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+          </div>
+        </div>
+      </div>
+
       {/* Projects */}
 
       <div className="bg-[url('https://t4.ftcdn.net/jpg/00/98/59/35/360_F_98593539_L3cNIqMZT511Qoz2DXe31xBAqMqPYdGj.jpg')] bg-contain h-fit bg:h-80vh text-slate-300">
@@ -196,6 +221,7 @@ const Home = () => {
           >
             Projects
           </h1>
+          <hr className="border-4 border-green-500 w-10 mx-auto" />
           <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 p-5 lg:pb-40">
             <div
               className="w-full rounded overflow-hidden shadow-lg group"
@@ -427,7 +453,7 @@ const Home = () => {
             <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center  text-slate-300 ">
               Contact Me
             </h2>
-
+            <hr className="border-4 border-green-500 w-10 mx-auto" />
             <form action="#" className="space-y-8 max-w-7xl mx-auto">
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
@@ -437,7 +463,7 @@ const Home = () => {
                   type="email"
                   id="email"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                  placeholder="name@flowbite.com"
+                  placeholder="name@email.com"
                   required
                 />
               </div>
@@ -474,6 +500,8 @@ const Home = () => {
           </div>
         </section>
       </div>
+
+      <footer></footer>
     </div>
   );
 };
