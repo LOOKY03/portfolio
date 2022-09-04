@@ -20,29 +20,25 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 
-
 const useDeviceSize = () => {
-
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
   const handleWindowResize = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-  }
+  };
 
   useEffect(() => {
     // component is mounted and window is available
     handleWindowResize();
-    window.addEventListener('resize', handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
     // unsubscribe from the event on component unmount
-    return () => window.removeEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
-  return [width, height]
-
-}
-
+  return [width, height];
+};
 
 const Home = () => {
   //const [modal, setModal] = useState(false);
@@ -50,7 +46,6 @@ const Home = () => {
   const [modalNetflix, setModalNetflix] = useState(false);
   const [modalHulu, setModalHulu] = useState(false);
   const [modalDisney, setModalDisney] = useState(false);
- 
 
   const toggleVocal = () => setModalVocal(!modalVocal);
   const toggleNetflix = () => setModalNetflix(!modalNetflix);
@@ -61,12 +56,9 @@ const Home = () => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  
   const [width, height] = useDeviceSize();
 
   //console.log(width)
-  
-  
 
   return (
     <div className="">
@@ -76,9 +68,9 @@ const Home = () => {
       </Head>
       <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Jfxs329H5weRiGDChdHLW-Usyft4JakF4Q&usqp=CAU')] bg-contain ">
         <Navbar />
-      
+
         <Container>
-          <Row xs={width < 1000 ? '1': "2"} className='pl-16 lg:pl-0'>
+          <Row xs={width < 1000 ? "1" : "2"} className="pl-16 lg:pl-0">
             <Col className="bg-inherit text-slate-300 pt-36 pb-10  ">
               <h1 className="text-4xl font-medium mt-5 ">Hello, My name is </h1>
               <h1 className="text-6xl font-medium mt-5 text-yellow-700">
@@ -111,10 +103,14 @@ const Home = () => {
         <Container id="about" className=" text-slate-300 pb-10">
           <h4 className="text-4xl font-semibold text-center pt-12">About me</h4>
           <p className="text-center w-3/4 mx-auto mt-5 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis
-            alias cum minus cupiditate, non autem neque inventore excepturi nemo
-            molestias in aperiam consequuntur nostrum adipisci suscipit sit
-            laborum corporis?
+            Hi, I'm Arvin Vaje. I'm currently working as an IT service desk at
+            vestas wind system company. I'm a self-taught developer who is
+            passionate about coding. I love creating websites that look best on
+            all screen sizes. Looking forward to jumpstarting my career as a
+            freelance developer. I am always open to challenges and constructive
+            feedback. I am open-minded and learn new things quickly. I want to
+            dedicate all my skills and talents to developing high-quality and
+            beautiful websites.
           </p>
           <img
             src="/myimage.jpg"
