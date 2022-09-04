@@ -177,12 +177,12 @@ const Home = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
+           <a className="no-underline text-slate-300 hover:text-slate-300" href="/ArvinVajeResume.docx" download={'/ArvinVajeResume.docx'}> <button type="submit" className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
               Download CV{" "}
               <span>
                 <DownloadIcon />
               </span>
-            </button>
+            </button></a>
           </div>
         </Container>
       </div>
@@ -192,12 +192,12 @@ const Home = () => {
         <div>
           <h1
             id="projects"
-            className="text-4xl font-semibold text-center pt-12"
+            className="text-4xl font-semibold text-center pt-12 text-slate-800"
           >
             Skills
           </h1>
           <hr className="border-4 border-green-500 w-10 mx-auto " />
-          <p className="text-center mb-5 px-2">
+          <p className="text-center mb-5 px-2 text-lg">
             Here are some of the technologies I uses when building a website.
           </p>
           <div className="flex justify-between flex-wrap lg:max-w-max-w-screen-1350 mx-auto pb-20 px-10">
