@@ -198,15 +198,15 @@ const Home = () => {
           </h1>
           <hr className="border-4 border-green-500 w-10 mx-auto" />
           <div className="flex justify-between flex-wrap lg:max-w-max-w-screen-1350 mx-auto pb-10 px-10">
-            <img src='/html5.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/css3.png' className="h-32 w-32 p-2 rounded-xl object-contain  bg-neutral-300 mb-2" alt="" />
-            <img src='/javascript.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/react.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/nextjs.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/bootstrap.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/github.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/firebase.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/sanity.io.png' className="h-32 w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/html5.png' className=" h-28 w-28 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/css3.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain  bg-neutral-300 mb-2" alt="" />
+            <img src='/javascript.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/react.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/nextjs.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/bootstrap.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/github.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/firebase.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+            <img src='/sanity.io.png' className="h-28 w-28 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
           </div>
         </div>
       </div>
