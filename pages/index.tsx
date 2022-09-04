@@ -187,8 +187,8 @@ const Home = () => {
         </Container>
       </div>
 
-      {/* Skills */} 
-      <div className="bg-neutral-200 ">
+      {/* Skills */}
+      <div className="bg-neutral-200">
         <div>
           <h1
             id="projects"
@@ -196,17 +196,83 @@ const Home = () => {
           >
             Skills
           </h1>
-          <hr className="border-4 border-green-500 w-10 mx-auto" />
-          <div className="flex justify-between flex-wrap lg:max-w-max-w-screen-1350 mx-auto pb-10 px-10">
-            <img src='/html5.png' className=" h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/css3.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain  bg-neutral-300 mb-2" alt="" />
-            <img src='/javascript.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/react.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/nextjs.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/bootstrap.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/github.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/firebase.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
-            <img src='/sanity.io.png' className="h-24 w-24 lg:h-32 lg:w-32 rounded-xl object-contain bg-neutral-300 mb-2" alt="" />
+          <hr className="border-4 border-green-500 w-10 mx-auto " />
+          <p className="text-center mb-5 px-2">
+            Here are some of the technologies I uses when building a website.
+          </p>
+          <div className="flex justify-between flex-wrap lg:max-w-max-w-screen-1350 mx-auto pb-20 px-10">
+            <div className="mb-4">
+              <p className="text-center">HTML 5</p>
+              <img
+                src="/html5.png"
+                className=" h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500 "
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">CSS 3</p>
+              <img
+                src="/css3.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain  bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">JAVASCRIPT</p>
+              <img
+                src="/javascript.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">REACT JS</p>
+              <img
+                src="/react.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">NEXT JS</p>
+              <img
+                src="/nextjs.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">BOOTSTRAP</p>
+              <img
+                src="/bootstrap.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">GITHUB</p>
+              <img
+                src="/github.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">FIREBASE</p>
+              <img
+                src="/firebase.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
+            <div className="mb-4">
+              <p className="text-center">SANITY CMS</p>
+              <img
+                src="/sanity.io.png"
+                className="h-24 w-24 lg:h-32 lg:w-32 p-2 rounded-xl object-contain bg-neutral-300 hover:bg-orange-500"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -454,7 +520,7 @@ const Home = () => {
               Contact Me
             </h2>
             <hr className="border-4 border-green-500 w-10 mx-auto" />
-            <form action="#" className="space-y-8 max-w-7xl mx-auto">
+            <form action="https://formsubmit.co/vaje.arvin14@gmail.com" method="POST" className="space-y-8 max-w-7xl mx-auto">
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Your email
@@ -500,6 +566,7 @@ const Home = () => {
           </div>
         </section>
       </div>
+      
 
       <footer></footer>
     </div>
