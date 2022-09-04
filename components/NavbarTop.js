@@ -45,7 +45,7 @@ const NavbarTop = () => {
       </div>
 
       <div className="lg:hidden ">
-        <Navbar color="dark" dark fixed="top">
+        <Navbar color="dark" dark fixed="top" className="opacity-80">
           <NavbarBrand className="me-auto">
             <Link href="/">
               <img
