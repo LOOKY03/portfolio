@@ -85,10 +85,11 @@ const Home = () => {
                 opportunities, contract jobs and use skills to solve complex UI
                 challenges and provide value to the growth of an organization
               </p>
-
-              <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
-                Hire Me
-              </button>
+              <Link href="#contacts">
+                <button className="bg-amber-800 p-2 rounded-md mt-10 px-4 hover:bg-amber-700">
+                  Hire Me
+                </button>
+              </Link>
             </Col>
             <Col className="relative ">
               <div className="my-custom-style bg-transparent">
@@ -182,7 +183,6 @@ const Home = () => {
               href="/ArvinVajeResume.docx"
               download={"/ArvinVajeResume.docx"}
             >
-            
               <button
                 type="submit"
                 className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800"
@@ -420,7 +420,11 @@ const Home = () => {
           <ModalHeader toggle={toggleVocal}>Vocal Clone</ModalHeader>
           <ModalBody>
             <img src="/vocal-media-picture.png" alt="" />
-            <p className="p-5">I cloned vocal to practice my designing skills if I can create a same website like this. I used nextjs in making this simple project and tailwind css for the design</p>
+            <p className="p-5">
+              I cloned vocal to practice my designing skills if I can create a
+              same website like this. I used nextjs in making this simple
+              project and tailwind css for the design
+            </p>
           </ModalBody>
           <ModalFooter>
             <Button
