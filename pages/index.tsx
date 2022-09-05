@@ -19,6 +19,7 @@ import {
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const useDeviceSize = () => {
   const [width, setWidth] = useState(0);
@@ -177,12 +178,21 @@ const Home = () => {
             </div>
           </div>
           <div className="flex justify-center">
-           <a className="no-underline text-slate-300 hover:text-slate-300" href="/ArvinVajeResume.docx" download={'/ArvinVajeResume.docx'}> <button type="submit" className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800">
-              Download CV{" "}
-              <span>
-                <DownloadIcon />
-              </span>
-            </button></a>
+            <Link
+              href="/ArvinVajeResume.docx"
+              download={"/ArvinVajeResume.docx"}
+            >
+            
+              <button
+                type="submit"
+                className="mt-5 md:mt-40 lg:mt-40 border p-2 px-5 rounded-lg hover:bg-amber-800"
+              >
+                Download CV
+                <span>
+                  <DownloadIcon />
+                </span>
+              </button>
+            </Link>
           </div>
         </Container>
       </div>
@@ -282,7 +292,7 @@ const Home = () => {
       <div className="bg-[url('https://t4.ftcdn.net/jpg/00/98/59/35/360_F_98593539_L3cNIqMZT511Qoz2DXe31xBAqMqPYdGj.jpg')] bg-contain h-fit bg:h-80vh text-slate-300">
         <div className="lg:max-w-max-w-screen-1350 mx-auto">
           <h1
-            id="projects"
+            id="projects "
             className="text-4xl font-semibold text-center pt-12"
           >
             Projects
@@ -410,7 +420,7 @@ const Home = () => {
           <ModalHeader toggle={toggleVocal}>Vocal Clone</ModalHeader>
           <ModalBody>
             <img src="/vocal-media-picture.png" alt="" />
-            <p>I cloned vocal</p>
+            <p className="p-5">I cloned vocal to practice my designing skills if I can create a same website like this. I used nextjs in making this simple project and tailwind css for the design</p>
           </ModalBody>
           <ModalFooter>
             <Button
@@ -438,7 +448,7 @@ const Home = () => {
           <ModalHeader toggle={toggleNetflix}>Netflix Clone</ModalHeader>
           <ModalBody>
             <img src="/netflix-picture.png" alt="" />
-            <p>
+            <p className="p-5">
               I used react js and styled component css in making this site. I
               incorporated redux toolkit in creating the site to manage global
               states. Also used firebase to do the authentication.
@@ -470,7 +480,7 @@ const Home = () => {
           <ModalHeader toggle={toggleHulu}>Hulu Clone</ModalHeader>
           <ModalBody>
             <img src="/hulu-picture.png" alt="" />
-            <p>
+            <p className="p-5">
               I used react js and styled component css in making this site. I
               followed a tutorial in making this website and added search
               functionality to look for videos.
@@ -494,7 +504,7 @@ const Home = () => {
           <ModalHeader toggle={toggleDisney}>Disney Clone</ModalHeader>
           <ModalBody>
             <img src="/disney-picture.png" alt="" />
-            <p>
+            <p className="p-5">
               I used react js and styled component css in making this site. I
               followed a tutorial in making this website and added own sliding
               side panet when when viewed on smaller devices
@@ -516,11 +526,18 @@ const Home = () => {
       <div className="">
         <section className=" bg-gray-900">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 className="mb-4 text-4xl tracking-tight font-semibold text-center  text-slate-300 ">
+            <h2
+              id="contacts"
+              className="mb-4 text-4xl tracking-tight font-semibold text-center  text-slate-300 "
+            >
               Contact Me
             </h2>
             <hr className="border-4 border-green-500 w-10 mx-auto" />
-            <form action="https://formsubmit.co/f0528c2d844e52ee576a808b4f7fafaf" method="POST" className="space-y-8 max-w-7xl mx-auto">
+            <form
+              action="https://formsubmit.co/f0528c2d844e52ee576a808b4f7fafaf"
+              method="POST"
+              className="space-y-8 max-w-7xl mx-auto"
+            >
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                   Your email
@@ -569,7 +586,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-      
 
       <footer></footer>
     </div>

@@ -69,12 +69,12 @@ const NavbarTop = () => {
                   Projects
                 </h1>
               </Link>
-              <Link href={""}>
+              <Link href=''>
                 <h1 className="cursor-pointer p-2 px-3 text-xl rounded-md hover:bg-amber-800 text-slate-300">
                   Blog
                 </h1>
               </Link>
-              <Link href={""}>
+              <Link href="">
                 <h1 className="cursor-pointer p-2 px-3 text-xl rounded-md hover:bg-amber-800 text-slate-300">
                   Contacts
                 </h1>
